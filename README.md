@@ -29,3 +29,7 @@ public class ExampleLog : MonoBehaviour
     }
 }
 ```
+
+### Result
+
+![example](https://github.com/Prima20/debug-helper/blob/develop/images/example.gif)
