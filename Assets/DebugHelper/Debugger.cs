@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace DebugHelper
 {
@@ -33,6 +31,18 @@ namespace DebugHelper
             }
         }
         #endregion
+
+        public void Log(object message)
+        {
+            logMessage += message + "\n";
+            Debug.Log(message);
+        }
+
+        public void Log(object message, Object context)
+        {
+            logMessage += message + "\n";
+            Debug.Log(message, context);
+        }
 
 
         void OnGUI()
