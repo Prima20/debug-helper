@@ -16,6 +16,24 @@ namespace DebugHelper
 
         private string logMessage = "";
 
+        #region Singleton
+        private static Debugger _instance = null;
+
+        public static Debugger Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    GameObject go = new GameObject("DebugHelper", typeof(Debugger));
+                    _instance = go.GetComponent<Debugger>();
+                }
+
+                return _instance;
+            }
+        }
+        #endregion
+
 
         void OnGUI()
         {
