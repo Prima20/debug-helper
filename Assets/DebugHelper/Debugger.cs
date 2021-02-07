@@ -2,6 +2,9 @@
 
 namespace DebugHelper
 {
+    /// <summary>
+    /// Debug helper class is a monobehaviour singleton class
+    /// </summary>
     public class Debugger : MonoBehaviour
     {
         private Vector2 scrollPosition;
@@ -41,6 +44,18 @@ namespace DebugHelper
         public void Log(object message, Object context)
         {
             logMessage += message + "\n";
+            Debug.Log(message, context);
+        }
+
+        public void LogWarning(object message)
+        {
+            logMessage += $"<color=#ffff00ff>{message}</color>" + "\n";
+            Debug.LogWarning(message);
+        }
+
+        public void LogWarning(object message, Object context)
+        {
+            logMessage += $"<color=#ffff00ff>{message}</color>" + "\n";
             Debug.Log(message, context);
         }
 
